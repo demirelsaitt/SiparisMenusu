@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SiparisMenusu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hm6-Pe-mhk">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="yemekHucre" id="gav-qx-i6i" customClass="YemekTableViewCell" customModule="SiparisMenusu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gav-qx-i6i" id="mIg-s9-9DV">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9kT-Ae-qSf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="Gfc-Vm-R9O"/>
+                                                        <constraint firstAttribute="height" constant="100" id="jot-ad-QYN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ürün Adı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfk-jV-sk9">
+                                                    <rect key="frame" x="120" y="11" width="76" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiyat: XX TL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i4-eK-sad">
+                                                    <rect key="frame" x="120" y="65" width="105.33333333333331" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" systemColor="systemRedColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWE-az-tXx">
+                                                    <rect key="frame" x="267.66666666666669" y="33" width="105.33333333333331" height="35"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Sipariş Ver"/>
+                                                    <connections>
+                                                        <action selector="siparisVerButton:" destination="gav-qx-i6i" eventType="touchUpInside" id="meb-rg-D3g"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Lfk-jV-sk9" firstAttribute="top" secondItem="mIg-s9-9DV" secondAttribute="topMargin" id="1Fe-wL-HyI"/>
+                                                <constraint firstItem="dWE-az-tXx" firstAttribute="top" secondItem="mIg-s9-9DV" secondAttribute="topMargin" constant="22" id="2pZ-PY-GBW"/>
+                                                <constraint firstItem="Lfk-jV-sk9" firstAttribute="leading" secondItem="9kT-Ae-qSf" secondAttribute="trailing" constant="20" id="56X-CI-0a3"/>
+                                                <constraint firstItem="2i4-eK-sad" firstAttribute="leading" secondItem="9kT-Ae-qSf" secondAttribute="trailing" constant="20" id="6Ar-Qj-4fe"/>
+                                                <constraint firstItem="2i4-eK-sad" firstAttribute="bottom" secondItem="mIg-s9-9DV" secondAttribute="bottomMargin" id="HQ5-Mu-yL2"/>
+                                                <constraint firstAttribute="bottom" secondItem="9kT-Ae-qSf" secondAttribute="bottom" id="iuO-ap-DJs"/>
+                                                <constraint firstItem="9kT-Ae-qSf" firstAttribute="top" secondItem="mIg-s9-9DV" secondAttribute="top" id="s4X-vQ-1Ff"/>
+                                                <constraint firstItem="9kT-Ae-qSf" firstAttribute="leading" secondItem="mIg-s9-9DV" secondAttribute="leading" id="udh-gQ-plf"/>
+                                                <constraint firstItem="dWE-az-tXx" firstAttribute="trailing" secondItem="mIg-s9-9DV" secondAttribute="trailingMargin" id="vcO-BV-ndH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelYemekAdi" destination="Lfk-jV-sk9" id="vEj-j7-Jh8"/>
+                                            <outlet property="labelYemekFiyat" destination="2i4-eK-sad" id="3bt-Hs-w1M"/>
+                                            <outlet property="yemekResimImageView" destination="9kT-Ae-qSf" id="dCk-hM-rjI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hm6-Pe-mhk" secondAttribute="bottom" id="5Dz-pU-Yxb"/>
+                            <constraint firstItem="hm6-Pe-mhk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9Jz-QJ-CuZ"/>
+                            <constraint firstItem="hm6-Pe-mhk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uvt-nl-gxb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hm6-Pe-mhk" secondAttribute="trailing" id="taK-sg-6UO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="yemeklerTableview" destination="hm6-Pe-mhk" id="TBH-hE-8L2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
